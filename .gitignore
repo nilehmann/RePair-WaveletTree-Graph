@@ -1,0 +1,12 @@
+Crawls/
+log/
+
+#Compiled stuffs
+*.a
+*.o
+
+test
+main
+build
+
+*~
