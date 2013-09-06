@@ -17,13 +17,16 @@ all: ${DIRS} pre build check test
 
 
 test: pre $(OBJ)/test.o ${TARGETS}
-	$(CC) -o test  $(OBJ)/test.o ${TARGETS} ${LIB} $(CFLAGS)
+	@echo " [LNK] Linking test"
+	@$(CC) -o test  $(OBJ)/test.o ${TARGETS} ${LIB} $(CFLAGS)
 
 check: pre $(OBJ)/check.o ${TARGETS}
-	$(CC) -o check  $(OBJ)/check.o ${TARGETS} ${LIB} $(CFLAGS)
+	@echo " [LNK] Linking check"
+	@$(CC) -o check  $(OBJ)/check.o ${TARGETS} ${LIB} $(CFLAGS)
 
 build: pre $(OBJ)/build.o ${TARGETS}
-	$(CC) -o build  $(OBJ)/build.o ${TARGETS} ${LIB} $(CFLAGS)
+	@echo " [LNK] Linking build"
+	@$(CC) -o build  $(OBJ)/build.o ${TARGETS} ${LIB} $(CFLAGS)
 
 pre:
 	@echo " [BLD] Building BPE"
@@ -31,7 +34,8 @@ pre:
 
 
 $(OBJ)/%.o: %.cpp *.h
-	$(CC) -c $(CFLAGS) $< -o $@
+	@echo " [C++] Compiling $<"
+	@$(CC) -c $(CFLAGS) $< -o $@
 
 
 ${DIRS}:

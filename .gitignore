@@ -6,7 +6,7 @@ log/
 *.o
 
 test
-main
+check
 build
 
 *~
