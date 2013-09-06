@@ -112,7 +112,7 @@ namespace cds_static
         	seq[i] = bitget(bm, i);
 
 
-		repair[level] = new BPE(seq,n, false,-1,32,5);
+		repair[level] = new BPE(seq,n, false,-1,32,2);
 		int len = repair[level]->getLargoMaxReal();
 		repair[level]->re_set_max_rule_len(len);
 
