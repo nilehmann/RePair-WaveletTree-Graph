@@ -50,9 +50,9 @@ namespace cds_static
 			}
 			if(neighbors == 0)
 				seq[k++] = this->nodes+1;
-			delete [] _adjacencyList[n];
+			//delete [] _adjacencyList[n];
 		}
-		delete [] _adjacencyList;
+		//delete [] _adjacencyList;
 
 		if(debug)
 			printf(" [GRPH] Building Bitsequence\n");

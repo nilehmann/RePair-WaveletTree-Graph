@@ -1,5 +1,5 @@
 
-# CPPFLAGS=-g3 -Wall -O0
+#CPPFLAGS=-g  -Wall -O1 -m32
 #-DVERBOSE
 CPPFLAGS=-O9 -Wall -DNDEBUG -m32
 

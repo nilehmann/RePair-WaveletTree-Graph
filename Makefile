@@ -6,8 +6,8 @@ LIBCDS=libcds
 LIBBPE=libbpe
 LIB= $(LIBBPE)/lib/lib_bpe.a $(LIBCDS)/lib/libcds.a 
 
-CFLAGS= -ggdb -m32 -fpermissive  -I$(LIBCDS)/includes/ -I$(LIBBPE)/includes/
-#CFLAGS= -O9 -DNDEBUG -m32 -fpermissive  -I$(LIBCDS)/includes/
+CFLAGS= -g -O1 -m32 -fpermissive  -I$(LIBCDS)/includes/ -I$(LIBBPE)/includes/
+#CFLAGS= -O9 -DNDEBUG -m32 -fpermissive  -I$(LIBCDS)/includes/ -I$(LIBBPE)/includes/
 
 TARGETS = $(OBJ)/RePairWaveletTree.o $(OBJ)/RePairWaveletTreeBuilder.o $(OBJ)/GraphSequence.o $(OBJ)/GraphSequenceTest.o
 
